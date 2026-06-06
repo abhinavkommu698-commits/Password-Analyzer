@@ -14,7 +14,7 @@ A web-based password analysis tool that evaluates password strength, provides su
 
 - TypeScript
 - Express.js
-- Prisma (PostgreSQL/SQLite)
+- Prisma (PostgreSQL compatible)
 - bcryptjs (password hashing)
 
 ## Getting Started
@@ -35,18 +35,21 @@ Visit http://localhost:3000 to use the password analyzer.
 
 ## Deployment on Render
 
-1. Fork or push this repository to GitHub
+1. Push this repository to GitHub
 2. Go to [Render](https://render.com) and create a new Web Service
 3. Connect your GitHub repository
 4. Render will automatically detect the `render.yaml` configuration
-5. Add `DATABASE_URL` environment variable (Render auto-generates this from the PostgreSQL database)
+5. The PostgreSQL database will be auto-provisioned via Render
 
 ### Manual Deployment
 
-If deploying manually:
+If deploying manually to another platform:
 
-1. Create a PostgreSQL database on Render
-2. Set `DATABASE_URL` environment variable in Render dashboard
+1. Create a PostgreSQL database
+2. Set `DATABASE_URL` environment variable:
+   ```
+   DATABASE_URL="postgresql://user:password@host:5432/dbname?schema=public"
+   ```
 3. Build command: `npm install`
 4. Start command: `npm start`
 
