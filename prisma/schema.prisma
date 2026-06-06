@@ -7,22 +7,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id        Int           @id @default(autoincrement())
-  email     String        @unique
-  name      String?
-  passwords PasswordEntry[]
-  createdAt DateTime      @default(now())
-}
-
 model PasswordEntry {
   id        Int      @id @default(autoincrement())
   password  String
   hash      String
   strength  Int
   category  String
-  userId    Int?
-  user      User?    @relation(fields: [userId], references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

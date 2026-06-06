@@ -2,26 +2,23 @@
   "name": "password-analyzer",
   "version": "1.0.0",
   "description": "Password analysis service with hashing and strength evaluation",
-  "main": "index.ts",
+  "main": "server.ts",
   "scripts": {
     "dev": "tsx server.ts",
     "start": "tsx server.ts",
-    "migrate": "prisma migrate deploy",
-    "generate": "prisma generate",
-    "postinstall": "prisma generate"
+    "migrate": "prisma migrate dev",
+    "generate": "prisma generate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "better-sqlite3": "^12.10.0",
     "tsx": "^4.0.0"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",
     "bcryptjs": "^3.0.3",
     "express": "^4.18.0",
-    "prisma": "^6.19.3",
-    "pg": "^8.12.0"
+    "prisma": "^6.19.3"
   }
 }
