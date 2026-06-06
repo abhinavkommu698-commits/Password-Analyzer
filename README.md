@@ -53,3 +53,26 @@ POST `/api/analyze` - Analyze a password
 - `npm run dev` - Start development server
 - `npm run migrate` - Run database migrations
 - `npm run generate` - Generate Prisma client
+
+- ## Screenshots
+
+### Home Page
+
+![Home Page](Homepage.png)
+
+### Password Analysis Result
+
+![Password Analysis Result](Password%20Result.png)
+
+### Prisma Database Storage
+
+![Prisma Database Storage](Prisma%20Studio.png)
+
+
+## Author
+
+Abhinav Kommu
+
+B.Tech CSE (AI & ML)
+
+Password Analyzer project developed using TypeScript, Express.js, Prisma ORM, SQLite, and bcryptjs.
